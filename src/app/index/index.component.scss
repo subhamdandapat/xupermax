@@ -1,0 +1,155 @@
+@import "src/theme/theme";
+
+app-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.slider {
+  //padding: 5% 0;
+  //background-color: map_get($theme, yellowbg);
+
+  .text_area {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    height: 100%;
+    padding: 20% 0;
+
+    h1 {
+      font-size: 46px;
+      font-weight: bold;
+      line-height: normal;
+
+      span {
+        color: map_get($theme, secondary);
+      }
+    }
+
+    p {
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    button {
+      margin-top: 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      .row {
+        display: flex;
+        flex-direction: column-reverse;
+
+        img {
+          margin-bottom: 24px;
+        }
+
+        .text_area {
+          padding: 5% 0;
+
+          h1 {
+            font-size: 28px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      .row {
+        .text_area {
+          h1 {
+            font-size: 30px;
+            line-height: normal;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.features {
+  padding: 5%;
+
+  .item_wrapper {
+    margin-bottom: 24px;
+
+    i.material-icons {
+      color: map_get($theme, secondary);
+      margin-bottom: 24px;
+      font-size: 35px;
+    }
+
+    h4 {
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    p {
+      font-weight: 500;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+  }
+}
+
+.reviews {
+  float: left;
+  width: 100%;
+  background-image: url("src/assets/imgs/review_bg.svg");
+  background-size: 45%;
+  background-position: top left;
+  margin-bottom: 32px;
+  background-repeat: no-repeat;
+
+  .text_area {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 35px;
+      font-weight: bold;
+      line-height: normal;
+    }
+  }
+
+  owl-carousel-o {
+    float: left;
+    width: 100%;
+    padding: 12% 0;
+
+    .owl-stage {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    background-size: 100vh;
+    owl-carousel-o {
+      padding: 5% 0;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    background-size: 30%;
+  }
+}
+
+.apps{
+  float: left;
+  width: 100%;
+}

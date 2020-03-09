@@ -1,0 +1,10 @@
+$theme: (
+  "primary": #4caf50,
+  "secondary": #f9125f,
+  "yellowbg": #fdfaf4
+);
+
+@mixin bg_primary {
+  color: white;
+  background-color: map_get($theme, primary);
+}

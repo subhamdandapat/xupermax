@@ -1,0 +1,35 @@
+//Nav
+@import "~bootstrap/scss/bootstrap";
+@import "theme";
+@import '~@angular/material/theming';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+$custom-typography: mat-typography-config($font-family: '"Spartan", sans-serif;');
+@include mat-core($custom-typography);
+
+button {
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+button.mat-focus-indicator.primary_btn.mat-button.mat-button-base.primary_btn {
+  @include bg_primary;
+  border: 0;
+  padding: 4px 24px;
+  border-radius: 0;
+  font-weight: 600;
+  box-shadow: 0 12px 17px rgba(0, 128, 0, 0.3);
+  position: relative;
+  font-size: 13px;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url("src/assets/imgs/btn_fold.svg");
+  }
+}

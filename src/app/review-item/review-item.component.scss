@@ -1,0 +1,10 @@
+mat-card.review_item{
+  margin: 16px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.08);
+  [mat-card-avatar]{
+    width: 40px;
+  }
+  mat-card-title{
+    font-size: 16px;
+  }
+}

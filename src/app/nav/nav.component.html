@@ -1,0 +1,22 @@
+<mat-sidenav-container class="example-container" [hasBackdrop]="true">
+  <mat-sidenav #sidenav mode="push">
+    <app-navitem></app-navitem>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <a class="navbar-brand" href="#">Xupermax</a>
+        <button class="navbar-toggler" mat-button type="button" (click)="sidenav.toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <app-navitem class="ml-auto"></app-navitem>
+        </div>
+      </div>
+    </nav>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
