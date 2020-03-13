@@ -1,0 +1,88 @@
+<div class="account_wrapper">
+  <div class="left">
+    <div class="form_wrapper">
+      <!--      <h1>Xupermax</h1>-->
+      <h1>Signup</h1>
+
+      <form action="">
+        <div class="fields">
+          <i class="ion-ios7-briefcase-outline"></i>
+          <input type="text" placeholder="Company Name">
+        </div>
+        <div class="fields">
+          <i class="ion-ios7-person-outline"></i>
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="fields">
+          <i class="ion-ios7-email-outline"></i>
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="fields">
+          <i class="ion-ios7-telephone-outline"></i>
+          <input type="text" placeholder="Phone Number">
+        </div>
+
+        <div class="fields wd100">
+          <i class="ion-ios7-location-outline"></i>
+          <textarea placeholder="Address"></textarea>
+        </div>
+
+        <div class="fields">
+          <i class="ion-ios7-location-outline"></i>
+          <input type="text" placeholder="City">
+        </div>
+
+        <div class="fields">
+          <i class="ion-ios7-location-outline"></i>
+          <input type="text" placeholder="State / Province / Region">
+        </div>
+
+        <div class="fields">
+          <i class="ion-ios7-navigate-outline"></i>
+          <input type="text" placeholder="Postal Code">
+        </div>
+
+        <div class="fields">
+          <i class="ion-ios7-world-outline"></i>
+          <mat-form-field style="width: 100%;">
+            <mat-select placeholder="Country">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="additem_tocart">
+          <h4>Add Items To Cart</h4>
+          <mat-checkbox> Single Location - $199/month</mat-checkbox>
+          <mat-checkbox> 2nd Location - $175/month</mat-checkbox>
+          <mat-checkbox> 3rd Location - $175/month</mat-checkbox>
+          <mat-checkbox> 4th Location - $175/month</mat-checkbox>
+          <mat-checkbox> 5th Location - $175/month</mat-checkbox>
+          <mat-checkbox> 6th Location - $175/month</mat-checkbox>
+        </div>
+
+        <div class="fields wd100">
+          <i class="ion-ios7-compose-outline"></i>
+          <input type="text" placeholder="Comments">
+        </div>
+
+        <button type="submit" class="login_btn">Buy Now $199</button>
+      </form>
+
+    </div>
+
+
+  </div>
+  <div class="right">
+    <div class="text_area">
+      <h1>The Best <span>Martial Arts</span> Software.</h1>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+        a page when looking at its layout.</p>
+    </div>
+
+    <video autoplay loop
+           src="https://ak5.picdn.net/shutterstock/videos/1034901965/preview/stock-footage-close-up-slow-motion-females-are-performing-incredibly-complex-and-steep-movements-of-the-martial.webm"></video>
+  </div>
+</div>

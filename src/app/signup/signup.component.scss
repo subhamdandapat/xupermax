@@ -1,0 +1,242 @@
+@import "src/theme/theme";
+
+.account_wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .left {
+    flex: 5;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .form_wrapper {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+
+      h1 {
+        font-weight: bold;
+        margin: 32px 0;
+        font-size: 34px;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .fields {
+          position: relative;
+          //margin-bottom: 8px;
+          width: 50%;
+          padding: 8px;
+
+          i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            width: 30px;
+          }
+
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 14px 16px 14px 42px;
+            border-radius: 8px;
+
+            &:focus, &:active {
+              outline: none;
+              border-color: map_get($theme, primary);
+            }
+          }
+
+
+        }
+
+        .wd100 {
+          width: 100%;
+
+          i {
+            top: 18px;
+            transform: none;
+          }
+
+          textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 14px 16px 14px 42px;
+            border-radius: 8px;
+            min-height: 50px;
+
+            &:focus, &:active {
+              outline: none;
+              border-color: map_get($theme, primary);
+            }
+          }
+        }
+
+        .additem_tocart{
+          display: flex;
+          flex-direction: column;
+          padding: 16px;
+          margin: 8px;
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          h4{
+            font-weight: bold;
+            font-size: 14px;
+          }
+          mat-checkbox{
+            margin-bottom: 8px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .login_btn {
+          background-color: #0ebd34;
+          border: 0;
+          padding: 16px;
+          color: #fff;
+          border-radius: 8px;
+          font-weight: bold;
+          box-shadow: -1px 6px 9px rgba(14, 189, 52, 0.27);
+          width: 250px;
+          margin: 24px 0;
+        }
+
+        .rgstr_btn {
+          background-color: #f9f9f9;
+          padding: 16px;
+          color: #777;
+          border-radius: 8px;
+          font-weight: bold;
+          width: 100%;
+          border: 1px solid #ccc;
+          margin-top: 16px;
+        }
+
+        a {
+          text-align: center;
+          cursor: pointer;
+        }
+
+        p {
+          margin-top: 16px;
+
+          a {
+            font-weight: 500;
+            color: map_get($theme, primary);
+          }
+        }
+
+      }
+    }
+  }
+
+  .right {
+    flex: 6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: black;
+      opacity: 0.5;
+      z-index: 1;
+      content: '';
+    }
+
+    .text_area {
+      z-index: 2;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: center;
+      height: 100%;
+      width: 500px;
+      max-width: 100%;
+
+      img {
+        margin-bottom: 16px;
+        width: 120px;
+      }
+
+      h1 {
+        font-size: 46px;
+        font-weight: bold;
+        line-height: normal;
+        color: #ffffff;
+
+        span {
+          color: map_get($theme, primary);
+        }
+      }
+
+      p {
+        font-weight: 500;
+        opacity: 0.8;
+        color: #ffffff;
+      }
+
+    }
+
+    video {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 999px) {
+    .left {
+      flex: 1;
+      min-width: 50%;
+    }
+    .right {
+      flex: 1;
+      min-width: 50%;
+    }
+  }
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    height: auto;
+    .right {
+      padding: 32px;
+
+      .text_area {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+    .left {
+      margin-top: 32px;
+      .form_wrapper{
+        width: 90%;
+      }
+    }
+  }
+}

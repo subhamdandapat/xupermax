@@ -13,15 +13,23 @@ import { HeadingComponent } from './heading/heading.component';
 import {CarouselModule} from 'ngx-owl-carousel-o';
 import { ReviewItemComponent } from './review-item/review-item.component';
 import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     IndexComponent,
     NavComponent,
     NavitemComponent,
     HeadingComponent,
-    ReviewItemComponent
+    ReviewItemComponent,
+    SignupComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,9 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatSidenavModule,
     CarouselModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
