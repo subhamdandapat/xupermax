@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
 
   constructor() {
     this.regformerror = {
-      
+
       name: {},
       email: {},
       make: {},
@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
       address: {},
       phone: {},
 
-    }
+    };
   }
 
   ngOnInit(): void {

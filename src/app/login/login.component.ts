@@ -13,17 +13,15 @@ export class LoginComponent implements OnInit {
   public loginformerror: any;
   loginsubmitted: boolean;
 
-  constructor(private formBuilder: FormBuilder) 
-  { 
+  constructor(private formBuilder: FormBuilder) {
     this.loginformerror = {
       email: {},
       password: {}
     };
   }
 
-  ngOnInit(): void 
-  {
-    this.loginform = this.createloginForm()
+  ngOnInit(): void {
+    this.loginform = this.createloginForm();
     this.loginform.valueChanges.subscribe(() => {
       this.onloginFormValuesChanged();
     });
@@ -53,7 +51,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  login(){
+  login() {
     this.loginsubmitted = true;
   }
 }
