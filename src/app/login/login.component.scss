@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
 
+  .errormessage{
+
+    text-emphasis-color: red
+  }
   .left {
     max-width: 600px;
     flex: 3;

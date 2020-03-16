@@ -1,4 +1,10 @@
 @import "theme/plugins";
 
+.errormessage {
+    color: red;
+    text-align: left;
+    font-size: 11px;
+    margin-left: 15px;
+  }
 html, body { height: 100%; }
 body { margin: 0;}
