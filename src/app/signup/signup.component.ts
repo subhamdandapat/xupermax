@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 interface Food {
   value: string;
@@ -12,6 +13,9 @@ interface Food {
 })
 
 export class SignupComponent implements OnInit {
+
+  regformerror: any;
+
   foods: Food[] = [
     {value: 'steak-0', viewValue: 'One'},
     {value: 'pizza-1', viewValue: 'Two'},
@@ -19,6 +23,16 @@ export class SignupComponent implements OnInit {
   ];
 
   constructor() {
+    this.regformerror = {
+      
+      name: {},
+      email: {},
+      make: {},
+      model: {},
+      address: {},
+      phone: {},
+
+    }
   }
 
   ngOnInit(): void {
