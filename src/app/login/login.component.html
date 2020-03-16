@@ -8,15 +8,15 @@
         <div class="fields">
           <i class="ion-ios7-email-outline"></i>
           <input type="email" formControlName="email" placeholder="Email Address">
-          <p class="errormessage" *ngIf="loginformerror.email.required ||  loginformerror.email.email ||(loginform.controls.email.pristine && loginsubmitted)"> Email can not be empty</p>
-
         </div>
+        <p class="errormessage" *ngIf="loginformerror.email.required ||  loginformerror.email.email ||(loginform.controls.email.pristine && loginsubmitted)"> Email can not be empty</p>
+
         <div class="fields">
           <i class="ion-ios7-locked-outline"></i>
           <input type="password" formControlName="password" placeholder="Password">
-          <p class="errormessage" *ngIf="loginformerror.password.required || (loginform.controls.password.pristine && loginsubmitted)">Password can not be empty</p>
-
         </div>
+        <p class="errormessage" *ngIf="loginformerror.password.required || (loginform.controls.password.pristine && loginsubmitted)">Password can not be empty</p>
+
         <button type="submit" class="login_btn" (click)="login()">Login</button>
         <a class="rgstr_btn" routerLink="/signup" routerLinkActive="active">Create Account</a>
         <p>Forgot Password? Don't worry we will reset password for you <a class="frgt_btn">Click here.</a></p>
