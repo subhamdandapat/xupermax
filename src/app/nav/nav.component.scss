@@ -11,6 +11,13 @@ mat-sidenav-container {
   nav {
     .navbar-brand {
       font-weight: bold;
+      img{
+        height: 30px;
+      }
+    }
+
+    app-navitem{
+      margin-left: 24px;
     }
 
     @media (max-width: 991px) {

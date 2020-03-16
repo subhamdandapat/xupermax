@@ -7,18 +7,27 @@
 
       <div class="col-md-5">
         <div class="text_area">
-          <h1>The Best <span>Martial Arts</span> Software.</h1>
+          <h2>The Best</h2>
+          <h1>Martial<span> Arts</span></h1>
+          <h3>School Management Software.</h3>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when
             looking at its layout.</p>
-          <button mat-button class="primary_btn" [routerLink]="['/login']">
-            Get Started
-          </button>
+          <div class="btns">
+            <button mat-button class="primary_btn" [routerLink]="['/login']">
+              Get Started
+            </button>
+            <span class="icon_btn" (click)="openDialog()">
+            <i class="material-icons">
+              play_arrow
+            </i>
+          </span>
+          </div>
 
         </div>
       </div>
 
-      <div class="col-md-7 p-0">
-        <img src="assets/imgs/martial_arts.svg" alt="">
+      <div class="col-md-7 p-0 banner_img">
+        <img src="assets/imgs/index/banner.jpg" alt="">
       </div>
 
     </div>
@@ -28,7 +37,7 @@
 
 <!--Features-->
 <div class="container">
-  <app-heading title="Features"></app-heading>
+  <app-heading title="Features" subtitle="Put some little content"></app-heading>
   <div class="features">
     <div class="row">
       <div class="col-md-4 col-sm-6">
@@ -36,9 +45,11 @@
           <i class="material-icons">
             email
           </i>
-          <h4>Email Automation</h4>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout.</p>
+          <div class="text_wrapper">
+            <h4>Email Automation</h4>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+              looking at its layout.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
@@ -46,9 +57,12 @@
           <i class="material-icons">
             fiber_smart_record
           </i>
-          <h4> Smart Dashboard</h4>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-            in some form.</p>
+          <div class="text_wrapper">
+
+            <h4> Smart Dashboard</h4>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
@@ -56,9 +70,12 @@
           <i class="material-icons">
             assignment
           </i>
-          <h4> Attendance Tracker</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam.</p>
+          <div class="text_wrapper">
+            <h4> Attendance Tracker</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem
+              aperiam.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
@@ -66,9 +83,12 @@
           <i class="material-icons">
             shopping_basket
           </i>
-          <h4>Marketing That Works</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam.</p>
+          <div class="text_wrapper">
+            <h4>Marketing That Works</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem
+              aperiam.</p>
+          </div>
         </div>
       </div>
 
@@ -77,9 +97,12 @@
           <i class="material-icons">
             settings
           </i>
-          <h4> Business Systems</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam.</p>
+          <div class="text_wrapper">
+            <h4> Business Systems</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem
+              aperiam.</p>
+          </div>
         </div>
       </div>
 
@@ -88,9 +111,12 @@
           <i class="material-icons">
             bar_chart
           </i>
-          <h4>Sales Funnels</h4>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam.</p>
+          <div class="text_wrapper">
+            <h4>Sales Funnels</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem
+              aperiam.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,7 +128,7 @@
 <!--Reviews-->
 <div class="reviews">
   <div class="container">
-<!--    <app-heading title="User Feedbacks"></app-heading>-->
+    <!--    <app-heading title="User Feedbacks"></app-heading>-->
     <div class="row">
       <div class="col-md-4">
         <div class="text_area">
@@ -113,16 +139,20 @@
       <div class="col-md-8">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide>
-            <app-review-item userimg="https://randomuser.me/api/portraits/women/32.jpg" username="Josephine Reed" usercomment="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."></app-review-item>
+            <app-review-item userimg="https://randomuser.me/api/portraits/women/32.jpg" username="Josephine Reed"
+                             usercomment="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."></app-review-item>
           </ng-template>
           <ng-template carouselSlide>
-            <app-review-item userimg="https://randomuser.me/api/portraits/men/75.jpg" username="Morris Black" usercomment="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."></app-review-item>
+            <app-review-item userimg="https://randomuser.me/api/portraits/men/75.jpg" username="Morris Black"
+                             usercomment="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."></app-review-item>
           </ng-template>
           <ng-template carouselSlide>
-            <app-review-item userimg="https://randomuser.me/api/portraits/women/32.jpg" username="Josephine Reed" usercomment="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."></app-review-item>
+            <app-review-item userimg="https://randomuser.me/api/portraits/women/32.jpg" username="Josephine Reed"
+                             usercomment="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."></app-review-item>
           </ng-template>
           <ng-template carouselSlide>
-            <app-review-item userimg="https://randomuser.me/api/portraits/men/75.jpg" username="Morris Black" usercomment="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."></app-review-item>
+            <app-review-item userimg="https://randomuser.me/api/portraits/men/75.jpg" username="Morris Black"
+                             usercomment="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."></app-review-item>
           </ng-template>
         </owl-carousel-o>
       </div>

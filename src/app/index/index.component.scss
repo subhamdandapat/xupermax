@@ -7,6 +7,7 @@ app-nav {
 }
 
 .slider {
+  background-color: black;
   //padding: 5% 0;
   //background-color: map_get($theme, yellowbg);
 
@@ -17,10 +18,16 @@ app-nav {
     justify-content: center;
     height: 100%;
     padding: 20% 0;
+    color: white;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 200;
+    }
 
     h1 {
-      font-size: 46px;
-      font-weight: bold;
+      font-size: 70px;
+      font-weight: normal;
       line-height: normal;
 
       span {
@@ -28,13 +35,42 @@ app-nav {
       }
     }
 
-    p {
-      font-weight: 500;
-      opacity: 0.8;
+    h3 {
+      font-size: 24px;
+      font-weight: 100;
     }
 
-    button {
+    p {
+      font-weight: 100;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .btns {
       margin-top: 16px;
+      display: flex;
+
+      button {
+        margin-right: 16px;
+      }
+
+      span.icon_btn {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ff6a16;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #252525;
+        box-shadow: inset 0 0 0 3px black;
+      }
+    }
+  }
+
+  .banner_img {
+    img {
+      width: 100%;
     }
   }
 
@@ -52,7 +88,7 @@ app-nav {
           padding: 5% 0;
 
           h1 {
-            font-size: 28px;
+            font-size: 38px;
             line-height: normal;
           }
         }
@@ -65,7 +101,7 @@ app-nav {
       .row {
         .text_area {
           h1 {
-            font-size: 30px;
+            font-size: 50px;
             line-height: normal;
           }
 
@@ -83,6 +119,11 @@ app-nav {
 
   .item_wrapper {
     margin-bottom: 24px;
+    display: flex;
+    background-color: black;
+    padding: 16px;
+    border-radius: 8px;
+    color: #ffffff;
 
     i.material-icons {
       color: map_get($theme, secondary);
@@ -149,7 +190,7 @@ app-nav {
   }
 }
 
-.apps{
+.apps {
   float: left;
   width: 100%;
 }

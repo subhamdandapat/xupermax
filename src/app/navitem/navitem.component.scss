@@ -2,21 +2,31 @@
 
 .navbar-nav {
   .nav-item {
+    padding: 0 4px;
     &.active {
       .nav-link {
-        color: map_get($theme, secondary);
-        font-weight: bold;
+        background-color: map_get($theme, primary);
+        color: white;
       }
     }
 
     .nav-link {
-      font-weight: 500;
-      color: rgb(0, 0, 0);
+      font-weight: normal;
+      color: rgba(255, 255, 255, 0.65);
       font-size: 14px;
-      padding: 8px;
+      padding: 4px 12px;
+      border-radius: 16px;
 
       &:hover {
-        color: map_get($theme, secondary);
+        color: map_get($theme, primary);
+      }
+    }
+  }
+  .round_border{
+    .nav-link{
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      &:hover {
+        border-color: map_get($theme, primary);
       }
     }
   }

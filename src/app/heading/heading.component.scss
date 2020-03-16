@@ -4,38 +4,25 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
 
   h2 {
-    font-weight: bold;
+    font-weight: normal;
     position: relative;
+    font-size: 54px;
+  }
 
-    &:after {
-      position: absolute;
-      bottom: -6px;
-      right: -10px;
-      content: '';
-      background-image: url("src/assets/imgs/heading_border.svg");
-      width: 15px;
-      height: 15px;
-      transform: scale(-1);
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-
-    &:before {
-      position: absolute;
-      top: -6px;
-      left: -10px;
-      content: '';
-      background-image: url("src/assets/imgs/heading_border.svg");
-      width: 15px;
-      height: 15px;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
+  p {
+    font-size: 20px;
+    margin-top: 4px;
   }
 
   @media (max-width: 991px) {
     margin-top: 32px;
+    h2 {
+      font-weight: normal;
+      position: relative;
+      font-size: 32px;
+    }
   }
 }

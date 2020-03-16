@@ -18,6 +18,9 @@ import { SignupComponent } from './signup/signup.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { VideomodalComponent } from './videomodal/videomodal.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ReviewItemComponent,
     SignupComponent,
     PagenotfoundComponent,
+    VideomodalComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     CarouselModule,
     MatCardModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
