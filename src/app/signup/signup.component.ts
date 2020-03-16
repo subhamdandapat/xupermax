@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 interface Food {
   value: string;
@@ -22,7 +23,8 @@ export class SignupComponent implements OnInit {
     {value: 'tacos-2', viewValue: 'Three'}
   ];
 
-  constructor() {
+  constructor( public snackBar:MatSnackBar ) {
+   
     this.regformerror = {
 
       name: {},
@@ -38,4 +40,8 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  signup(message){
+    this.snackBar.open(message)
+  }
+  
 }
