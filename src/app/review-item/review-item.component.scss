@@ -1,10 +1,18 @@
+@import "src/theme/theme";
+
 mat-card.review_item{
   margin: 16px;
   box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: black;
+  border-left: 6px solid map-get($theme, primary);
+  color: white;
   [mat-card-avatar]{
     width: 40px;
   }
   mat-card-title{
     font-size: 16px;
+  }
+  .mat-card-subtitle {
+    color: rgba(255, 255, 255, 0.54);
   }
 }
