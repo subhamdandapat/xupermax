@@ -7,6 +7,9 @@
       .nav-link {
         background-color: map_get($theme, primary);
         color: white;
+        &:hover {
+          color: white;
+        }
       }
     }
 
