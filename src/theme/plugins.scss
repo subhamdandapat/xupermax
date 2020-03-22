@@ -24,3 +24,13 @@ button.mat-focus-indicator.primary_btn.mat-button.mat-button-base.primary_btn {
   border-radius: 24px;
   font-weight: bold;
 }
+
+button.mat-focus-indicator.seconday_btn_no_shadow.mat-button.mat-button-base {
+  @include bg_seconday;
+  border: 0;
+  padding: 4px 24px;
+  position: relative;
+  font-size: 16px;
+  border-radius: 24px;
+  font-weight: bold;
+}

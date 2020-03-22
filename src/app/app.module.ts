@@ -24,6 +24,8 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BlogitemComponent } from './blogitem/blogitem.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PagenotfoundComponent,
     VideomodalComponent,
     DashboardComponent,
+    BlogitemComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,39 @@
+@import "src/theme/theme";
+
+mat-card.blog_item {
+  margin: 0;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: #303030;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: -29px;
+    width: 106px;
+    bottom: 0;
+    content: "";
+    background: map-get($theme, primary);
+    transform: skewX(-16deg);
+    z-index: -1;
+    @media (max-width:767px) {
+      top: -502px;
+      left: -29px;
+      width: 226px;
+      transform: skewX(-43deg);
+      z-index: -1;
+    }
+  }
+
+  h3 {
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

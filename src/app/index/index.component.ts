@@ -35,6 +35,20 @@ export class IndexComponent implements OnInit {
     },
     nav: true
   };
+
+  blogOptions: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    autoplay: true,
+    navText: ['', ''],
+    items: 1,
+    nav: true
+  };
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {

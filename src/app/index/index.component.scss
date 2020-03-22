@@ -114,54 +114,65 @@ app-nav {
   }
 }
 
-.features {
+.features_wrapper {
+  background-image: url("../../assets/imgs/features_bg.svg");
+  background-position: bottom right;
+  background-size: 350px;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
   padding: 5%;
+  background-color: white;
 
-  .col * {
-    margin-bottom: 24px;
-  }
+  .features {
+    margin-top: 32px;
 
-  .item_wrapper {
-    display: flex;
-    background-color: black;
-    padding: 16px;
-    border-radius: 8px;
-    color: #ffffff;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 70px;
-      height: 70px;
-      content: '';
-      background-image: url("../../assets/imgs/blog_corner.svg");
-      background-size: cover;
-    }
-
-    i.material-icons {
-      color: #fff;
+    .col * {
       margin-bottom: 24px;
-      font-size: 35px;
-      z-index: 1;
     }
 
-    .text_wrapper {
-      padding-left: 40px;
+    .item_wrapper {
+      display: flex;
+      background-color: black;
+      padding: 16px;
+      border-radius: 8px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
 
-      h4 {
-        font-weight: 600;
-        margin-bottom: 8px;
-        font-size: 15px;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70px;
+        height: 70px;
+        content: '';
+        background-image: url("../../assets/imgs/blog_corner.svg");
+        background-size: cover;
       }
 
-      p {
-        font-weight: 500;
-        opacity: 0.8;
-        font-size: 14px;
+      i.material-icons {
+        color: #fff;
+        margin-bottom: 24px;
+        font-size: 35px;
+        z-index: 1;
+      }
+
+      .text_wrapper {
+        padding-left: 40px;
+
+        h4 {
+          font-weight: 600;
+          margin-bottom: 8px;
+          font-size: 15px;
+        }
+
+        p {
+          font-weight: 500;
+          opacity: 0.8;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -170,6 +181,8 @@ app-nav {
 .promotional_video {
   background-color: black;
   padding: 5% 0;
+  float: left;
+  width: 100%;
 
   .texts {
     display: flex;
@@ -207,14 +220,13 @@ app-nav {
 
   iframe {
     width: 100%;
-    height: 450px;
+    height: 350px;
   }
 }
 
 .reviews {
   float: left;
   width: 100%;
-  margin-bottom: 32px;
 
   .text_area {
     height: 100%;
@@ -225,7 +237,8 @@ app-nav {
     background-color: map_get($theme, primary);
     padding: 16px;
     position: relative;
-    &:after{
+
+    &:after {
       position: absolute;
       top: 0;
       left: 0;
@@ -235,7 +248,8 @@ app-nav {
       background-image: url("../../assets/imgs/review_bg.svg");
       background-size: cover;
     }
-    &:before{
+
+    &:before {
       position: absolute;
       top: 0;
       right: 0;
@@ -253,7 +267,8 @@ app-nav {
       margin-bottom: 4px;
       z-index: 1;
     }
-    p{
+
+    p {
       color: white;
       z-index: 1;
     }
@@ -272,7 +287,7 @@ app-nav {
   @media (max-width: 767px) {
     background-size: 100vh;
     .text_area {
-      &:before{
+      &:before {
         display: none;
       }
     }
@@ -286,7 +301,78 @@ app-nav {
   }
 }
 
-.apps {
+.blog {
+  float: left;
+  width: 100%;
+  background-color: black;
+  padding: 64px 0;
+
+  app-heading {
+    color: white;
+    float: left;
+    width: 100%;
+
+    .title {
+      margin: 0 !important;
+    }
+  }
+
+  owl-carousel-o {
+    float: left;
+    width: 100%;
+    margin-top: 32px;
+
+    app-blogitem {
+      float: left;
+      width: 100%;
+      margin: 8px 0;
+    }
+  }
+}
+
+.subscribe {
+  float: left;
+  width: 100%;
+  padding: 32px 0;
+  background-image: url("../../assets/imgs/subscribe_bg.svg");
+  background-position: top left;
+  background-size: 250px;
+  background-repeat: no-repeat;
+
+  h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  form {
+
+    input {
+      width: 100%;
+      padding: 0 12px;
+      border-radius: 32px;
+      border: 1px solid #ccc;
+      height: 44px;
+      margin-top: 12px;
+
+      &:focus, &:active {
+        outline: none;
+      }
+    }
+
+    .seconday_btn_no_shadow {
+      margin-top: 12px;
+      width: 100%;
+    }
+  }
+}
+
+app-footer{
   float: left;
   width: 100%;
 }
