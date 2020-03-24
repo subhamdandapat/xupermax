@@ -26,6 +26,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BlogitemComponent } from './blogitem/blogitem.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { HomeComponent } from './home/home.component';
+import { CreatecontactComponent } from './createcontact/createcontact.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { FooterComponent } from './footer/footer.component';
     DashboardComponent,
     BlogitemComponent,
     FooterComponent,
+    ContactsComponent,
+    HomeComponent,
+    CreatecontactComponent,
   ],
   imports: [
     BrowserModule,
