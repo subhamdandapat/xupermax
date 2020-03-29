@@ -30,6 +30,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CreatecontactComponent } from './createcontact/createcontact.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ContactsComponent,
     HomeComponent,
     CreatecontactComponent,
+    ContactDetailsComponent,
   ],
   imports: [
     BrowserModule,
