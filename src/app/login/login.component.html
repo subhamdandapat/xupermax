@@ -7,9 +7,9 @@
       <form action="" [formGroup]="loginform">
         <div class="fields">
           <i class="ion-ios7-email-outline"></i>
-          <input type="email" formControlName="email" placeholder="Email Address">
+          <input type="text" formControlName="email" placeholder="User Name">
         </div>
-        <p class="errormessage" *ngIf="loginformerror.email.required ||  loginformerror.email.email ||(loginform.controls.email.pristine && loginsubmitted)"> Email can not be empty</p>
+        <p class="errormessage" *ngIf="loginformerror.email.required || (loginform.controls.email.pristine && loginsubmitted)"> Email can not be empty</p>
 
         <div class="fields">
           <i class="ion-ios7-locked-outline"></i>

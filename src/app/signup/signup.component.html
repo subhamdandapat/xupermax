@@ -4,56 +4,101 @@
       <!--      <h1>Xupermax</h1>-->
       <h1>Signup</h1>
 
-      <form action="">
+      <form action="" [formGroup]="signupform">
+
         <div class="fields">
           <i class="ion-ios7-briefcase-outline"></i>
-          <input type="text" placeholder="Company Name">
+          <input type="text" formControlName="companyname" placeholder="Company Name">
         </div>
+        <p class="errormessage" *ngIf="regformerror.companyname.required  ||(signupform.controls.companyname.pristine && regsubmitted)"> Company can not be empty</p>
+
+
         <div class="fields">
           <i class="ion-ios7-person-outline"></i>
-          <input type="text" placeholder="Full Name">
+          <input type="text" formControlName="lastname" placeholder="Last Name">
         </div>
+        <p class="errormessage" *ngIf="regformerror.lastname.required  ||(signupform.controls.lastname.pristine && regsubmitted)"> lastname can not be empty</p>
+
+
+        <div class="fields">
+          <i class="ion-ios7-person-outline"></i>
+          <input type="text" formControlName="firstname" placeholder="First Name">
+        </div>
+        <p class="errormessage" *ngIf="regformerror.firstname.required  ||(signupform.controls.firstname.pristine && regsubmitted)"> firstname can not be empty</p>
+
+
         <div class="fields">
           <i class="ion-ios7-email-outline"></i>
-          <input type="email" placeholder="Email Address">
+          <input type="email" formControlName="email" placeholder="Email Address">
         </div>
+        <p class="errormessage" *ngIf="regformerror.email.required ||  regformerror.email.email ||(signupform.controls.email.pristine && regsubmitted)"> Email can not be empty</p>
+
+        <div class="fields">
+          <i class="ion-ios7-person-outline"></i>
+          <input type="text" formControlName="username" placeholder="UserName" (blur)="onblur()">
+        </div>
+        <p class="errormessage" *ngIf="regformerror.username.required  ||(signupform.controls.username.pristine && regsubmitted)"> username can not be empty</p>
+
+
+        <div class="fields">
+          <i class="ion-ios7-email-outline"></i>
+          <input type="password" formControlName="password" placeholder="Password">
+        </div>
+        <p class="errormessage" *ngIf="regformerror.password.required || (signupform.controls.password.pristine && regsubmitted)"> Password can not be empty</p>
+
+
         <div class="fields">
           <i class="ion-ios7-telephone-outline"></i>
-          <input type="text" placeholder="Phone Number">
+          <input type="text" formControlName="phone"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          type = "number"
+          maxlength = "10" placeholder="Phone Number">
         </div>
+        <p class="errormessage" *ngIf="regformerror.phone.required || (signupform.controls.phone.pristine && regsubmitted)">Phone can not be empty</p>
+
 
         <div class="fields wd100">
           <i class="ion-ios7-location-outline"></i>
-          <textarea placeholder="Address"></textarea>
+          <textarea  formControlName="address" placeholder="Address"></textarea>
+          <p class="errormessage" *ngIf="regformerror.address.required || (signupform.controls.address.pristine && regsubmitted)">Address can not be empty</p>
+
         </div>
 
         <div class="fields">
           <i class="ion-ios7-location-outline"></i>
-          <input type="text" placeholder="City">
+          <input type="text" formControlName="city" placeholder="City">
         </div>
+        <p class="errormessage" *ngIf="regformerror.city.required || (signupform.controls.city.pristine && regsubmitted)">city can not be empty</p>
+
 
         <div class="fields">
           <i class="ion-ios7-location-outline"></i>
-          <input type="text" placeholder="State / Province / Region">
+          <input type="text" formControlName="state" placeholder="State / Province / Region">
         </div>
+        <p class="errormessage" *ngIf="regformerror.state.required || (signupform.controls.state.pristine && regsubmitted)">city can not be empty</p>
+
 
         <div class="fields">
           <i class="ion-ios7-navigate-outline"></i>
-          <input type="text" placeholder="Postal Code">
+          <input type="text" formControlName="zipcode" placeholder="Zip Code">
         </div>
+        <p class="errormessage" *ngIf="regformerror.zipcode.required || (signupform.controls.zipcode.pristine && regsubmitted)">zipcode can not be empty</p>
+
 
         <div class="fields">
           <i class="ion-ios7-world-outline"></i>
-          <mat-form-field style="width: 100%;">
+          <input type="text" formControlName="country" placeholder="Country">
+          <!-- <mat-form-field style="width: 100%;">
             <mat-select placeholder="Country">
               <mat-option *ngFor="let food of foods" [value]="food.value">
                 {{food.viewValue}}
               </mat-option>
             </mat-select>
-          </mat-form-field>
+          </mat-form-field> -->
         </div>
+        <p class="errormessage" *ngIf="regformerror.country.required || (signupform.controls.country.pristine && regsubmitted)">country can not be empty</p>
 
-        <div class="additem_tocart">
+
+        <!-- <div class="additem_tocart">
           <h4>Add Items To Cart</h4>
           <mat-checkbox> Single Location - $199/month</mat-checkbox>
           <mat-checkbox> 2nd Location - $175/month</mat-checkbox>
@@ -61,14 +106,14 @@
           <mat-checkbox> 4th Location - $175/month</mat-checkbox>
           <mat-checkbox> 5th Location - $175/month</mat-checkbox>
           <mat-checkbox> 6th Location - $175/month</mat-checkbox>
-        </div>
+        </div> -->
 
         <div class="fields wd100">
           <i class="ion-ios7-compose-outline"></i>
           <input type="text" placeholder="Comments ">
         </div>
 
-        <button type="submit" class="login_btn" (click)="signup('Name Is required')">Buy Now $199</button>
+        <button type="submit" class="login_btn" (click)="signup()">Buy Now $199</button>
       </form>
 
     </div>

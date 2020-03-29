@@ -29,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CreatecontactComponent } from './createcontact/createcontact.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -65,8 +66,11 @@ import { CreatecontactComponent } from './createcontact/createcontact.component'
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,MatSnackBarModule,
+    HttpClientModule
+    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HttpClient],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
