@@ -29,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CreatecontactComponent } from './createcontact/createcontact.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CreatecontactComponent } from './createcontact/createcontact.component'
     ContactsComponent,
     HomeComponent,
     CreatecontactComponent,
+    ContactDetailsComponent,
   ],
   imports: [
     BrowserModule,

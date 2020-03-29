@@ -8,6 +8,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CreatecontactComponent } from './createcontact/createcontact.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -18,9 +19,11 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
+      {path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
       { path: 'contacts', component: ContactsComponent },
-      { path: 'createcontact', component: CreatecontactComponent }
+      { path: 'createcontact', component: CreatecontactComponent },
+      { path: 'contactdetail', component: ContactDetailsComponent }
     ]
   },
 ];
