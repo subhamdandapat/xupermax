@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { LoginsignupService } from '../loginsignup.service';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
   public loginformerror: any;
   loginsubmitted: boolean;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+    public loginsignupProvider:LoginsignupService) {
     this.loginformerror = {
       email: {},
       password: {}
@@ -53,5 +55,17 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginsubmitted = true;
+    let data = {
+      username:this.loginform.value.email,
+      password:this.loginform.value.password
+    }
+    this.loginsignupProvider.login(data).subscribe(result=>{
+      let logdata:any = result;
+      if(logdata.error == true){
+        alert("Your approval is in pending mode");
+      }else{
+        
+      }
+    })
   }
 }
