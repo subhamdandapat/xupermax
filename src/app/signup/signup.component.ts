@@ -90,7 +90,7 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  signup(message){
+  signup(){
     this.regsubmitted=true;
     // this.snackBar.open(message)
     let data = {
@@ -110,7 +110,9 @@ export class SignupComponent implements OnInit {
 
     this.loginsignupProvider.registration(data).subscribe(result=>{
       let regdata:any = result;
+      this.regsubmitted=false;
       console.log(regdata);
+      alert("Requested, A link has been sent to your email for verification");
     })
 
   }

@@ -16,6 +16,11 @@ export class LoginsignupService {
     return this.http.post(APIURL + 'registeruser', data)
   }
 
+  //Login...
+  login(data) {
+    return this.http.post(APIURL + 'login', data)
+  }
+
   //check username....
   checkusername(data){
     return this.http.get(APIURL + 'checkusername?username='+data)
