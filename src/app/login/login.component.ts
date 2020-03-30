@@ -55,17 +55,22 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginsubmitted = true;
-    let data = {
-      username:this.loginform.value.email,
-      password:this.loginform.value.password
-    }
-    this.loginsignupProvider.login(data).subscribe(result=>{
-      let logdata:any = result;
-      if(logdata.error == true){
-        alert("Your approval is in pending mode");
-      }else{
-        
+    if(!this.loginform.value.email && !this.loginform.value.password){
+      return
+    }else{
+      let data = {
+        username:this.loginform.value.email,
+        password:this.loginform.value.password
       }
-    })
+      this.loginsignupProvider.login(data).subscribe(result=>{
+        let logdata:any = result;
+        this.loginsubmitted = false;
+        if(logdata.error == true){
+          alert("Your approval is in pending mode");
+        }else{
+          
+        }
+      })
+    }
   }
 }
