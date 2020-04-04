@@ -88,10 +88,10 @@
                             </div>
                             <div class="widget-content-left  ml-3 header-user-info">
                                 <div class="widget-heading">
-                                    Alina Mclourd
+                                    {{organizationdata.firstName}}
                                 </div>
                                 <div class="widget-subheading">
-                                    VP People Manager
+                                    {{organizationdata.company}}
                                 </div>
                             </div>
                             <div class="widget-content-right header-user-info ml-3">
@@ -514,7 +514,7 @@
                         <li>
                             <a [routerLink]="['./']" class="mm-active">
                                 <i class="metismenu-icon pe-7s-rocket"></i>
-                                The Brainless Corporation
+                                {{organizationdata.company}}
                             </a>
                         </li>
                         <li class="app-sidebar__heading">Management Features</li>
