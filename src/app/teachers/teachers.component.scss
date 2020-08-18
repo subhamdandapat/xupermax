@@ -1,0 +1,23 @@
+.studentform {
+    padding: 3em 0em 0;
+    width: 90%;
+    margin: 0 auto;
+}
+.studentform label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #3f6ad8;
+    font-weight: 600;
+    font-size: 14px;
+}
+.studentform .form-control{
+    box-shadow: 0 0 7px 1px rgb(0 0 0 / 21%);
+    border:none
+}
+.studentform .btn.submit{
+    color: white;
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%) !important;
+    width: 15%;
+    font-size: 15px;
+    padding: 8px 0;
+}

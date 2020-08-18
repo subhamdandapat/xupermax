@@ -9,6 +9,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CreatecontactComponent } from './createcontact/createcontact.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { StudentsComponent } from './students/students.component';
+import { TeachersComponent } from './teachers/teachers.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -23,7 +25,9 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'contacts', component: ContactsComponent },
       { path: 'createcontact', component: CreatecontactComponent },
-      { path: 'contactdetail', component: ContactDetailsComponent }
+      { path: 'contactdetail', component: ContactDetailsComponent },
+      { path: 'teachers', component: TeachersComponent },
+      { path: 'students', component: StudentsComponent }
     ]
   },
 ];

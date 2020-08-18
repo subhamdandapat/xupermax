@@ -56,6 +56,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.router.navigate(['./dashboard']);
+
     this.loginsubmitted = true;
     if(!this.loginform.value.email && !this.loginform.value.password){
       return
@@ -73,7 +75,7 @@ export class LoginComponent implements OnInit {
         }else{
           // let data = {}
           localStorage.setItem("userdata",JSON.stringify(logdata.data))
-          this.router.navigate(['./dashboard']);
+          // this.router.navigate(['./dashboard']);
           
         }
       })

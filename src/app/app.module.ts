@@ -31,6 +31,8 @@ import { HomeComponent } from './home/home.component';
 import { CreatecontactComponent } from './createcontact/createcontact.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { TeachersComponent } from './teachers/teachers.component';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     HomeComponent,
     CreatecontactComponent,
     ContactDetailsComponent,
+    TeachersComponent,
+    StudentsComponent,
   ],
   imports: [
     BrowserModule,
